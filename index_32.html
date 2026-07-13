@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js')</script>
+<title>Breithorn Service SA — Strategia e Consulenza · Lugano</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<meta name="description" content="Breithorn Service SA è una società di consulenza con sede a Lugano: strategia, sviluppo commerciale, analisi e consulenza direzionale per un gruppo selezionato di aziende industriali e di consumo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --summit:#1C2531;--slate:#55606C;--glacier:#3F7A93;--glacier-soft:#7BA6B8;
+    --haze:#F1F3F2;--snow:#FBFCFB;--line:#DCE1E0;--line-dark:#31404E;--frost:#EAF1F3;
+    --maxw:1180px;--pad:clamp(1.25rem,5vw,4.5rem);
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--summit);background:var(--haze);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
+  .eyebrow{font-family:"IBM Plex Sans",sans-serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--glacier);font-weight:600}
+  .mono{font-family:"IBM Plex Mono",monospace}
+
+  /* ---- nav ---- */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(241,243,242,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:box-shadow .3s ease,background .3s ease}
+  header.nav.scrolled{box-shadow:0 1px 0 rgba(28,37,49,.05),0 10px 30px -22px rgba(28,37,49,.55);background:rgba(241,243,242,.92)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:"EB Garamond",serif;display:flex;align-items:center;gap:.6rem}
+  .logo-mark{height:1.95rem;width:auto;flex:0 0 auto}
+  .brand .wordmark{display:inline-flex;align-items:baseline;gap:.5rem;font-size:1.16rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--summit)}
+  .brand .sa{font-family:"EB Garamond",serif;font-size:.74rem;font-weight:500;letter-spacing:.16em;color:var(--slate);text-transform:uppercase}
+  .nav-right{display:flex;align-items:center;gap:2.2rem}
+  nav.links{display:flex;gap:2.2rem}
+  nav.links a{font-family:"IBM Plex Sans",sans-serif;font-size:.92rem;font-weight:500;letter-spacing:.01em;color:var(--slate);padding:.4rem 0;position:relative}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--glacier);transition:width .3s ease}
+  nav.links a:hover{color:var(--summit)}
+  nav.links a:hover::after{width:100%}
+  nav.links a:focus-visible{outline:2px solid var(--glacier);outline-offset:4px}
+  .lang{display:flex;align-items:center;gap:.45rem;font-family:"IBM Plex Mono",monospace;font-size:.74rem}
+  .lang button{background:none;border:none;cursor:pointer;font:inherit;color:var(--slate);padding:.25rem;letter-spacing:.12em;transition:color .2s ease}
+  .lang button.active{color:var(--summit);font-weight:500}
+  .lang button:hover{color:var(--glacier)}
+  .lang .sep{color:var(--line);cursor:default;padding:0}
+  .lang button:focus-visible{outline:2px solid var(--glacier);outline-offset:3px}
+
+  /* ---- hero ---- */
+  .hero{position:relative;padding-top:clamp(3rem,8vw,7rem);padding-bottom:clamp(3rem,7vw,6rem)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,4vw,4rem);align-items:center}
+  .hero h1{font-family:"EB Garamond",serif;font-weight:500;font-size:clamp(2.7rem,6vw,5.1rem);line-height:1.03;letter-spacing:-.015em;margin:1.4rem 0 1.6rem}
+  .hero h1 em{font-style:italic;color:var(--glacier)}
+  .hero p.lede{font-size:clamp(1.02rem,1.5vw,1.18rem);color:var(--slate);max-width:37ch}
+  .hero-cta{display:flex;gap:1rem;margin-top:2.2rem;flex-wrap:wrap}
+  .btn{font-family:"IBM Plex Sans",sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;padding:.85rem 1.5rem;border:1px solid var(--summit);transition:.25s ease;display:inline-flex;align-items:center;gap:.5rem;cursor:pointer}
+  .btn.primary{background:var(--summit);color:var(--frost)}
+  .btn.primary:hover{background:var(--glacier);border-color:var(--glacier)}
+  .btn.ghost:hover{background:var(--summit);color:var(--frost)}
+  .btn span{transition:transform .25s var(--ease)}
+  .btn:hover span{transform:translateX(4px)}
+  .btn:focus-visible{outline:2px solid var(--glacier);outline-offset:3px}
+
+  /* ---- topographic signature ---- */
+  .topo{width:100%;height:auto;display:block}
+  .topo path{fill:none;stroke:var(--glacier);stroke-width:2.1}
+  .topo .ridge{stroke:var(--summit);stroke-width:2.8}
+  .topo .contour{stroke-dasharray:2600;stroke-dashoffset:2600;animation:draw 2.4s ease forwards}
+  .trig line{stroke:var(--summit);stroke-width:2}
+  .trig circle{fill:none;stroke:var(--summit);stroke-width:2}
+  .trig text{font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:24px;fill:var(--summit);letter-spacing:.14em}
+  .trig{opacity:0;animation:fadein .8s ease 2.15s forwards}
+  .topo .route{stroke:var(--summit);stroke-width:2;stroke-dasharray:2 7;stroke-linecap:round;opacity:0;animation:fadein 1.1s ease 1.75s forwards}
+  .topo .elev{font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:15px;fill:var(--summit);letter-spacing:.08em;stroke:none;opacity:0;animation:fadein 1s ease 2s forwards}
+  .trig .pulse{fill:var(--glacier);stroke:none;opacity:0;transform-box:fill-box;transform-origin:center;animation:pulse 3.4s ease-out 2.9s infinite}
+  @keyframes pulse{0%{opacity:.4;transform:scale(.3)}65%{opacity:0;transform:scale(1.9)}100%{opacity:0}}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @keyframes fadein{to{opacity:1}}
+  @keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+  /* ---- section scaffold ---- */
+  section{padding-block:clamp(3.5rem,7vw,6.5rem)}
+  .sec-head{display:flex;align-items:baseline;gap:1.2rem;margin-bottom:2.8rem;flex-wrap:wrap}
+  .sec-head h2{font-family:"EB Garamond",serif;font-weight:400;font-size:clamp(1.7rem,3.2vw,2.5rem);letter-spacing:-.01em}
+  .sec-head .count{margin-left:auto;color:var(--slate)}
+  .eyebrow.section-title-solo{font-size:1rem;letter-spacing:.2em}
+
+  /* ---- approach ---- */
+  #approach{background:var(--snow);border-block:1px solid var(--line)}
+  .disc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .disc{background:var(--snow);padding:1.8rem 1.6rem 2rem;min-height:210px;display:flex;flex-direction:column;transition:background .3s ease;cursor:pointer}
+  .disc:focus-visible{outline:2px solid var(--glacier);outline-offset:-2px}
+  .disc:hover{background:var(--frost)}
+  .disc .k{font-size:1.5rem;line-height:1;color:var(--glacier);margin-bottom:1.1rem;transition:transform .3s var(--ease)}
+  .disc:hover .k{transform:translateY(-3px)}
+  .disc h3{font-family:"EB Garamond",serif;font-weight:500;font-size:1.22rem;margin-bottom:.6rem}
+  .disc p{font-size:.92rem;color:var(--slate)}
+  .disc-more{margin-top:auto;padding-top:1.1rem;font-family:"IBM Plex Sans",sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--glacier);display:inline-flex;align-items:center;gap:.4rem}
+  .disc-more span{transition:transform .25s var(--ease)}
+  .disc:hover .disc-more{color:var(--summit)}
+  .disc:hover .disc-more span{transform:translateX(4px)}
+  .modal-content ul{margin:.5rem 0 .8rem;padding-left:1.15rem}
+  .modal-content li{font-size:.95rem;color:var(--slate);margin-bottom:.4rem;line-height:1.55}
+
+  /* ---- portfolio ---- */
+  .port-intro{max-width:56ch;color:var(--slate);margin-bottom:2.6rem;font-size:1.05rem}
+  .port-list{border-top:1px solid var(--line)}
+  .port-row{display:grid;grid-template-columns:2.4rem 1.7fr 2fr auto;gap:1.5rem;align-items:center;padding:1.5rem .4rem;border-bottom:1px solid var(--line);transition:.3s var(--ease);position:relative}
+  .port-row:hover{background:var(--snow);padding-left:1.1rem;padding-right:1.1rem}
+  .port-row .idx{font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--glacier)}
+  .port-name{font-family:"EB Garamond",serif;font-size:1.42rem;font-weight:400}
+  .port-name .tag{display:block;font-family:"IBM Plex Sans";font-size:.82rem;color:var(--slate);font-style:normal;margin-top:.15rem;letter-spacing:.01em}
+  .port-sector{font-size:.95rem;color:var(--slate)}
+  .port-go{font-family:"IBM Plex Sans",sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--glacier);white-space:nowrap;display:inline-flex;align-items:center;gap:.45rem}
+  .port-go span{transition:transform .25s ease}
+  .port-row:hover .port-go span{transform:translateX(4px)}
+  .port-row:focus-visible{outline:2px solid var(--glacier);outline-offset:-2px}
+
+  /* ---- contact ---- */
+  #contact{background:var(--summit);color:var(--frost);position:relative;overflow:hidden}
+  #contact .dusk-topo{position:absolute;inset:0;width:100%;height:100%;opacity:.16;pointer-events:none}
+  #contact .dusk-topo path{fill:none;stroke:var(--glacier-soft);stroke-width:1}
+  #contact .wrap{position:relative;z-index:2}
+  #contact .eyebrow{color:var(--glacier-soft)}
+  #contact h2{font-family:"EB Garamond",serif;font-weight:500;font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.01em;margin:1rem 0 0;max-width:16ch}
+  .contact-wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2.5rem,5vw,5rem);align-items:start}
+  .contact-details{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem 2rem;margin-top:2.4rem;border-top:1px solid var(--line-dark);padding-top:2rem}
+  .contact-col .label{font-family:"IBM Plex Sans",sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--glacier-soft);margin-bottom:.8rem}
+  .contact-col a,.contact-col address,.contact-col span.val{color:var(--frost);font-style:normal;line-height:1.7;font-size:1.02rem}
+  .contact-col a:hover{color:var(--glacier-soft)}
+  .placeholder{color:var(--glacier-soft);border-bottom:1px dashed var(--glacier-soft);cursor:help}
+
+  /* ---- contact form ---- */
+  .cform{display:block}
+  .cform .field{margin-bottom:1.1rem}
+  .cform label{display:block;font-family:"IBM Plex Sans",sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--glacier-soft);margin-bottom:.5rem}
+  .cform input,.cform select,.cform textarea{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line-dark);color:var(--frost);font-family:"IBM Plex Sans",sans-serif;font-size:.98rem;padding:.78rem .9rem;transition:border-color .25s ease,background .25s ease}
+  .cform input:focus,.cform select:focus,.cform textarea:focus{outline:none;border-color:var(--glacier-soft);background:rgba(255,255,255,.07)}
+  .cform input::placeholder,.cform textarea::placeholder{color:#69798a}
+  .cform textarea{resize:vertical;min-height:112px;line-height:1.5}
+  .cform select{appearance:none;-webkit-appearance:none;cursor:pointer;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%237BA6B8' stroke-width='1.6'/></svg>");background-repeat:no-repeat;background-position:right .95rem center;padding-right:2.3rem}
+  .cbtn{margin-top:.5rem;width:100%;justify-content:center;background:var(--glacier);color:#fff;border:1px solid var(--glacier)}
+  .cbtn:hover{background:var(--glacier-soft);border-color:var(--glacier-soft)}
+  .hp{position:absolute!important;left:-9999px;top:auto;height:1px;width:1px;overflow:hidden}
+  .cform-success{padding:.5rem 0}
+  .cform-success .check{width:54px;height:54px;margin-bottom:1.1rem;display:block}
+  .cform-success .check circle{fill:none;stroke:var(--glacier-soft);stroke-width:2;stroke-dasharray:151;stroke-dashoffset:151;animation:draw .6s var(--ease) forwards}
+  .cform-success .check path{fill:none;stroke:var(--glacier-soft);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:44;stroke-dashoffset:44;animation:draw .45s var(--ease) .5s forwards}
+  .cform-success h3{font-family:"EB Garamond",serif;font-weight:400;font-size:1.5rem;margin-bottom:.4rem}
+  .cform-success p{color:var(--glacier-soft)}
+  .cform-success[hidden]{display:none}
+
+  /* ---- footer ---- */
+  footer.site{background:var(--summit);color:var(--slate);border-top:1px solid var(--line-dark);padding-block:2.4rem}
+  .foot-inner{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;font-family:"IBM Plex Sans",sans-serif;font-size:.78rem;letter-spacing:.02em}
+  .foot-inner .fbrand{color:var(--frost);font-family:"EB Garamond",serif;font-size:1rem;letter-spacing:.02em}
+  .impressum{max-width:var(--maxw);margin:1.6rem auto 0;padding-inline:var(--pad)}
+  .impressum summary{font-family:"IBM Plex Sans",sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--glacier-soft);cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:.45rem;padding:.35rem 0}
+  .impressum summary::-webkit-details-marker{display:none}
+  .impressum summary::before{content:"+";font-size:.95rem;line-height:1}
+  .impressum[open] summary::before{content:"–"}
+  .impressum summary:hover{color:var(--frost)}
+  .impressum-body{margin-top:1.1rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.2rem 2.5rem;font-family:"IBM Plex Sans",sans-serif;font-size:.82rem;letter-spacing:.01em;color:#8f99a2;line-height:1.55}
+  .impressum-body > div{padding:.55rem 0;border-bottom:1px solid var(--line-dark)}
+  .impressum-body .il{color:var(--glacier-soft);display:block;text-transform:uppercase;letter-spacing:.1em;font-size:.6rem;margin-bottom:.2rem}
+  .foot-links{max-width:var(--maxw);margin:1.3rem auto 0;padding-inline:var(--pad);display:flex;gap:1.6rem}
+  .foot-link{background:none;border:none;cursor:pointer;font-family:"IBM Plex Sans",sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--glacier-soft);padding:.3rem 0}
+  .foot-link:hover{color:var(--frost);text-decoration:underline}
+  .modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(15,20,27,.62);display:flex;align-items:center;justify-content:center;padding:1.2rem;animation:fadein .25s ease}
+  .modal-overlay[hidden]{display:none}
+  .modal{background:var(--snow);color:var(--summit);max-width:760px;width:100%;max-height:86vh;overflow-y:auto;position:relative;padding:clamp(1.7rem,4vw,3rem)}
+  .modal-close{position:absolute;top:.9rem;right:1.1rem;background:none;border:none;font-size:1.7rem;line-height:1;color:var(--slate);cursor:pointer;padding:.2rem .45rem}
+  .modal-close:hover{color:var(--summit)}
+  .modal-content h3{font-family:"EB Garamond",serif;font-weight:400;font-size:1.75rem;margin-bottom:1rem;letter-spacing:-.01em}
+  .modal-content h4{font-family:"IBM Plex Sans",sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--glacier);margin:1.7rem 0 .5rem}
+  .modal-content p{font-size:.95rem;color:var(--slate);margin-bottom:.5rem;line-height:1.65}
+  .modal-content a{color:var(--glacier);text-decoration:underline}
+  @media(max-width:600px){.impressum-body{grid-template-columns:1fr}}
+
+  /* ---- scroll reveal (progressive, motion-safe) ---- */
+  @media (prefers-reduced-motion: no-preference){
+    html.js .hero-copy > *{opacity:0;animation:rise .85s var(--ease) forwards}
+    html.js .hero-copy > *:nth-child(1){animation-delay:.10s}
+    html.js .hero-copy > *:nth-child(2){animation-delay:.22s}
+    html.js .hero-copy > *:nth-child(3){animation-delay:.34s}
+    html.js .hero-copy > *:nth-child(4){animation-delay:.46s}
+    html.js [data-reveal],html.js [data-reveal-stagger] > *{opacity:0;transform:translateY(20px);transition:opacity .75s var(--ease),transform .75s var(--ease)}
+    html.js [data-reveal].in,html.js [data-reveal-stagger].in > *{opacity:1;transform:none}
+    html.js [data-reveal-stagger].in > *:nth-child(1){transition-delay:.00s}
+    html.js [data-reveal-stagger].in > *:nth-child(2){transition-delay:.07s}
+    html.js [data-reveal-stagger].in > *:nth-child(3){transition-delay:.14s}
+    html.js [data-reveal-stagger].in > *:nth-child(4){transition-delay:.21s}
+    html.js [data-reveal-stagger].in > *:nth-child(5){transition-delay:.28s}
+    html.js [data-reveal-stagger].in > *:nth-child(6){transition-delay:.35s}
+    html.js [data-reveal-stagger].in > *:nth-child(7){transition-delay:.42s}
+    html.js [data-reveal-stagger].in > *:nth-child(8){transition-delay:.49s}
+    .hero-topo .topo{animation:floaty 16s ease-in-out infinite alternate}
+    @keyframes floaty{to{transform:translateY(-12px)}}
+    #contact .dusk-topo{animation:drift 20s ease-in-out infinite alternate}
+    @keyframes drift{from{transform:translateY(0)}to{transform:translateY(-16px)}}
+  }
+
+  /* ---- responsive ---- */
+  @media(max-width:900px){
+    nav.links{display:none}
+    .nav-right{gap:0}
+    .hero-grid{grid-template-columns:1fr;gap:2.5rem}
+    .hero-topo{order:-1;max-width:440px}
+    .disc-grid{grid-template-columns:repeat(2,1fr)}
+    .port-row{grid-template-columns:1.8rem 1fr auto;row-gap:.4rem}
+    .port-sector{grid-column:2/4;font-size:.88rem}
+    .contact-wrap{grid-template-columns:1fr;gap:2.5rem}
+    #contact h2{max-width:none}
+  }
+  @media(max-width:520px){
+    .disc-grid{grid-template-columns:1fr}
+    .hero-cta{flex-direction:column;align-items:stretch}
+    .btn{justify-content:center}
+    .contact-details{grid-template-columns:1fr}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .topo .contour{animation:none;stroke-dashoffset:0}
+    .trig{animation:none;opacity:1}
+    .topo .route,.topo .elev{animation:none;opacity:1}
+    .trig .pulse{animation:none;opacity:0}
+    .hero-topo .topo{animation:none}
+    .cform-success .check circle,.cform-success .check path{animation:none;stroke-dashoffset:0}
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Breithorn Service SA">
+      <img class="logo-mark" src="data:image/png;base64,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" alt="" aria-hidden="true">
+      <span class="wordmark">Breithorn <span class="sa">Service&nbsp;SA</span></span>
+    </a>
+    <div class="nav-right">
+      <nav class="links" aria-label="Primary">
+        <a href="#approach" data-i18n="nav.approach">Cosa facciamo</a>
+        <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="#contact" data-i18n="nav.contact">Contatti</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Lingua / Language">
+        <button type="button" data-lang="it" class="active" aria-pressed="true">IT</button>
+        <span class="sep" aria-hidden="true">/</span>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Strategia · Sviluppo commerciale · Analisi</p>
+        <h1 data-i18n="hero.h1">From here,<br>decisions get <em>clearer.</em></h1>
+        <p class="lede" data-i18n="hero.lede">Breithorn Service SA è una società di consulenza con sede a Lugano. Affianchiamo un gruppo selezionato di aziende industriali e di consumo in strategia, sviluppo commerciale e digitalizzazione.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#portfolio" data-i18n="hero.cta1">Scopri il portfolio <span aria-hidden="true">→</span></a>
+          <a class="btn ghost" href="#contact" data-i18n="hero.cta2">Contattaci</a>
+        </div>
+      </div>
+
+      <div class="hero-topo">
+        <svg class="topo" viewBox="0 0 1000 640" role="img" aria-label="Disegno a curve di livello del Breithorn, ampia vetta alpina a doppia sommità, con quote, via di salita e segnale trigonometrico in cima.">
+          <path class="contour ridge" style="animation-delay:0.05s" d="M30,604 C140,592 320,550 425,492 C454,477 486,477 512,494 C545,510 585,530 628,513 C649,504 671,504 696,517 C755,546 820,572 970,602"/>
+          <path class="contour" style="animation-delay:0.2s" d="M72,562 C182,550 322,506 427,448 C456,433 488,433 514,450 C547,466 581,490 624,473 C645,464 667,464 692,477 C751,506 790,530 940,560"/>
+          <path class="contour" style="animation-delay:0.35s" d="M114,520 C224,508 324,462 429,404 C458,389 490,389 516,406 C549,422 577,450 620,433 C641,424 663,424 688,437 C747,466 760,488 910,518"/>
+          <path class="contour" style="animation-delay:0.5s" d="M156,478 C266,466 326,418 431,360 C460,345 492,345 518,362 C551,378 573,410 616,393 C637,384 659,384 684,397 C743,426 730,446 880,476"/>
+          <path class="contour" style="animation-delay:0.65s" d="M198,436 C308,424 328,374 433,316 C462,301 494,301 520,318 C553,334 569,370 612,353 C633,344 655,344 680,357 C739,386 700,404 850,434"/>
+          <path class="contour" style="animation-delay:0.8s" d="M240,394 C350,382 330,330 435,272 C464,257 496,257 522,274 C555,290 565,330 608,313 C629,304 651,304 676,317 C735,346 670,362 820,392"/>
+          <path class="contour" style="animation-delay:0.95s" d="M282,352 C392,340 332,286 437,228 C466,213 498,213 524,230 C557,246 561,290 604,273 C625,264 647,264 672,277 C731,306 640,320 790,350"/>
+          <path class="contour" style="animation-delay:1.1s" d="M324,310 C434,298 334,242 439,184 C468,169 500,169 526,186 C559,202 557,250 600,233 C621,224 643,224 668,237 C727,266 610,278 760,308"/>
+          <text class="elev" x="948" y="556">3500</text>
+          <text class="elev" x="858" y="430">3800</text>
+          <text class="elev" x="798" y="346">4100</text>
+          <path class="route" d="M210,592 C300,560 340,500 390,430 C430,373 450,300 470,230 C476,208 480,192 483,172"/>
+          <g class="trig" transform="translate(484,140)">
+            <circle class="pulse" cx="0" cy="0" r="11"/>
+            <circle cx="0" cy="0" r="7"/>
+            <line x1="-15" y1="0" x2="-9" y2="0"/><line x1="9" y1="0" x2="15" y2="0"/>
+            <line x1="0" y1="-15" x2="0" y2="-9"/><line x1="0" y1="9" x2="0" y2="15"/>
+            <text x="22" y="5">4164 M</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <p class="eyebrow section-title-solo"><span data-i18n="approach.eyebrow">Cosa facciamo</span></p>
+      </div>
+      <div class="disc-grid" data-reveal-stagger>
+        <div class="disc" data-service="s1" role="button" tabindex="0" aria-label="Strategia">
+          <div class="k mono">↗</div>
+          <h3 data-i18n="disc1.h3">Strategia</h3>
+          <p data-i18n="disc1.p">Scelte chiare su dove investire tempo, capitale e attenzione.</p>
+          <span class="disc-more" data-i18n="disc.more">Scopri di più <span aria-hidden="true">&rarr;</span></span>
+        </div>
+        <div class="disc" data-service="s2" role="button" tabindex="0" aria-label="Sviluppo commerciale">
+          <div class="k mono">◇</div>
+          <h3 data-i18n="disc2.h3">Sviluppo commerciale</h3>
+          <p data-i18n="disc2.p">Nuovi mercati, canali e partner commerciali.</p>
+          <span class="disc-more" data-i18n="disc.more">Scopri di più <span aria-hidden="true">&rarr;</span></span>
+        </div>
+        <div class="disc" data-service="s3" role="button" tabindex="0" aria-label="Analisi">
+          <div class="k mono">▤</div>
+          <h3 data-i18n="disc3.h3">Analisi</h3>
+          <p data-i18n="disc3.p">I numeri dietro le decisioni: costi, margini, scenari e rischi, letti con chiarezza.</p>
+          <span class="disc-more" data-i18n="disc.more">Scopri di più <span aria-hidden="true">&rarr;</span></span>
+        </div>
+        <div class="disc" data-service="s4" role="button" tabindex="0" aria-label="Consulenza direzionale">
+          <div class="k mono">△</div>
+          <h3 data-i18n="disc4.h3">Consulenza direzionale</h3>
+          <p data-i18n="disc4.p">Struttura, ritmo e responsabilità: il piano diventa esecuzione quotidiana.</p>
+          <span class="disc-more" data-i18n="disc.more">Scopri di più <span aria-hidden="true">&rarr;</span></span>
+        </div>
+        <div class="disc" data-service="s5" role="button" tabindex="0" aria-label="Digitalizzazione">
+          <div class="k mono">▦</div>
+          <h3 data-i18n="disc5.h3">Digitalizzazione</h3>
+          <p data-i18n="disc5.p">Processi e archivi portati dal cartaceo al digitale, senza stravolgere il lavoro di tutti i giorni.</p>
+          <span class="disc-more" data-i18n="disc.more">Scopri di più <span aria-hidden="true">&rarr;</span></span>
+        </div>
+        <div class="disc" data-service="s6" role="button" tabindex="0" aria-label="Integrazione AI">
+          <div class="k mono">◈</div>
+          <h3 data-i18n="disc6.h3">Integrazione AI</h3>
+          <p data-i18n="disc6.p">Portare l'intelligenza artificiale nei flussi di lavoro, dove serve davvero.</p>
+          <span class="disc-more" data-i18n="disc.more">Scopri di più <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <p class="eyebrow section-title-solo"><span data-i18n="port.eyebrow">Portfolio</span></p>
+        <span class="count mono">08</span>
+      </div>
+      <p class="port-intro" data-reveal data-i18n="port.intro">Un gruppo selezionato tra industria pesante, tecnologie per l'edilizia e beni di consumo di pregio. Affianchiamo ciascuna nel lungo periodo.</p>
+
+      <div class="port-list" data-reveal-stagger>
+        <a class="port-row" href="https://www.ivrvalvole.it/" target="_blank" rel="noopener">
+          <span class="idx">IT</span>
+          <span class="port-name">IVR Valvole<span class="tag">Innovation Value Research</span></span>
+          <span class="port-sector" data-i18n="sector.ivr">Valvole a sfera e componenti idrotermosanitari</span>
+          <span class="port-go"><span class="lbl" data-i18n="visit">Visita</span> <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="port-row" href="http://www.krioklima.ch/" target="_blank" rel="noopener">
+          <span class="idx">CH</span>
+          <span class="port-name">KrioKlima<span class="tag">Swiss Technology for your Comfort</span></span>
+          <span class="port-sector" data-i18n="sector.krio">Tecnologie HVAC e per il comfort climatico</span>
+          <span class="port-go"><span class="lbl" data-i18n="visit">Visita</span> <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="port-row" href="https://effecto.com/" target="_blank" rel="noopener">
+          <span class="idx">IT</span>
+          <span class="port-name">Effecto Group<span class="tag">We Support your Solutions</span></span>
+          <span class="port-sector" data-i18n="sector.effecto">Automazione industriale, robotica ed EOAT</span>
+          <span class="port-go"><span class="lbl" data-i18n="visit">Visita</span> <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="port-row" href="https://seas-sa.com/" target="_blank" rel="noopener">
+          <span class="idx">CH</span>
+          <span class="port-name">SEAS<span class="tag">We create water from air</span></span>
+          <span class="port-sector" data-i18n="sector.seas">Generazione di acqua dall'aria</span>
+          <span class="port-go"><span class="lbl" data-i18n="visit">Visita</span> <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="port-row" href="https://tancabrands.com/" target="_blank" rel="noopener">
+          <span class="idx">IT</span>
+          <span class="port-name">Tanca<span class="tag">The Brands Company</span></span>
+          <span class="port-sector" data-i18n="sector.tanca">Una casa di marchi di consumo</span>
+          <span class="port-go"><span class="lbl" data-i18n="visit">Visita</span> <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="port-row" href="https://pilo-watches.com/" target="_blank" rel="noopener">
+          <span class="idx">CH</span>
+          <span class="port-name">Pilo &amp; Co<span class="tag">We build the watches you dream of</span></span>
+          <span class="port-sector" data-i18n="sector.pilo">Alta orologeria svizzera su misura</span>
+          <span class="port-go"><span class="lbl" data-i18n="visit">Visita</span> <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="port-row" href="https://www.yourkitchengroup.com/" target="_blank" rel="noopener">
+          <span class="idx">NA</span>
+          <span class="port-name">Your Kitchen Group<span class="tag">A game changer in your kitchen</span></span>
+          <span class="port-sector" data-i18n="sector.ykg">Innovazione e marchi per la cucina</span>
+          <span class="port-go"><span class="lbl" data-i18n="visit">Visita</span> <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="port-row" href="https://emotionalgrandmotel.it/" target="_blank" rel="noopener">
+          <span class="idx">IT</span>
+          <span class="port-name">Emotional Grand Motel<span class="tag">Un soggiorno che emoziona</span></span>
+          <span class="port-sector" data-i18n="sector.egm">Ospitalità boutique — business &amp; leisure</span>
+          <span class="port-go"><span class="lbl" data-i18n="visit">Visita</span> <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <svg class="dusk-topo" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path d="M-20,360 C180,345 300,300 430,220 C495,180 525,168 565,182 C650,215 780,320 1020,350"/>
+      <path d="M-20,300 C180,285 310,245 440,170 C500,135 528,124 566,138 C645,168 770,262 1020,292"/>
+      <path d="M-20,240 C190,226 325,192 452,124 C505,94 530,86 562,98 C632,124 748,208 1020,236"/>
+    </svg>
+    <div class="wrap contact-wrap">
+      <div class="contact-left" data-reveal>
+        <p class="eyebrow section-title-solo"><span data-i18n="contact.eyebrow">Contatti</span></p>
+        <h2 data-i18n="contact.h2">Troviamo insieme la via più chiara.</h2>
+        <div class="contact-details">
+          <div class="contact-col">
+            <div class="label" data-i18n="contact.office">Sede</div>
+            <address>Breithorn Service SA<br>Via Nassa 62<br>6900 Lugano, <span data-i18n="contact.country">Svizzera</span></address>
+          </div>
+          <div class="contact-col">
+            <div class="label" data-i18n="contact.direct">Contatti diretti</div>
+            <a href="tel:+41772797420">+41 77 279 74 20</a><br>
+            <a href="mailto:info@breithornservice.com">info@breithornservice.com</a>
+          </div>
+          <div class="contact-col">
+            <div class="label" data-i18n="contact.hours">Orari</div>
+            <span class="val" data-i18n="contact.hoursval">Lunedì – Venerdì<br>Su appuntamento</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right" data-reveal>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" class="cform">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hp"><label>Non compilare se sei umano: <input name="bot-field"></label></p>
+          <div class="field">
+            <label for="f-name" data-i18n="form.name">Nome e cognome</label>
+            <input id="f-name" name="name" type="text" required data-i18n-ph="form.name.ph" placeholder="Mario Rossi">
+          </div>
+          <div class="field">
+            <label for="f-company" data-i18n="form.company">Azienda</label>
+            <input id="f-company" name="company" type="text" data-i18n-ph="form.company.ph" placeholder="Nome dell'azienda">
+          </div>
+          <div class="field">
+            <label for="f-email" data-i18n="form.email">Email</label>
+            <input id="f-email" name="email" type="email" required data-i18n-ph="form.email.ph" placeholder="nome@azienda.ch">
+          </div>
+          <div class="field">
+            <label for="f-topic" data-i18n="form.topic">Ambito d'interesse</label>
+            <select id="f-topic" name="topic">
+              <option value="strategia" data-i18n="form.topic.strategy">Strategia</option>
+              <option value="sviluppo" data-i18n="form.topic.bizdev">Sviluppo commerciale</option>
+              <option value="analisi" data-i18n="form.topic.analysis">Analisi</option>
+              <option value="consulenza" data-i18n="form.topic.consulting">Consulenza direzionale</option>
+              <option value="altro" data-i18n="form.topic.other">Altro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg" data-i18n="form.message">Messaggio</label>
+            <textarea id="f-msg" name="message" rows="4" required data-i18n-ph="form.message.ph" placeholder="Come possiamo aiutarti?"></textarea>
+          </div>
+          <button type="submit" class="btn cbtn" data-i18n="form.submit">Invia messaggio <span aria-hidden="true">→</span></button>
+        </form>
+
+        <div class="cform-success" id="formSuccess" hidden>
+          <svg class="check" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M14 27 l8 8 l16 -18"/></svg>
+          <h3 data-i18n="form.success.title">Messaggio inviato.</h3>
+          <p data-i18n="form.success.text">Grazie. Ti ricontatteremo al più presto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap foot-inner">
+    <span class="fbrand">Breithorn Service SA</span>
+    <span>Via Nassa 62 · 6900 Lugano · CHE-114.312.096</span>
+    <span data-i18n="footer.rights">© 2026 · Tutti i diritti riservati</span>
+  </div>
+  <div class="wrap foot-links"><button type="button" class="foot-link" id="privacyOpen" data-i18n="footer.privacy">Informativa privacy</button></div>
+  <details class="impressum">
+    <summary data-i18n="footer.impressum">Impressum</summary>
+    <div class="impressum-body">
+      <div><span class="il" data-i18n="imp.company">Ragione sociale</span>Breithorn Service SA</div>
+      <div><span class="il" data-i18n="imp.form">Forma giuridica</span><span data-i18n="imp.formv">Società anonima (SA)</span></div>
+      <div><span class="il" data-i18n="imp.seat">Sede</span>Lugano, <span data-i18n="contact.country">Svizzera</span></div>
+      <div><span class="il" data-i18n="imp.address">Indirizzo</span>c/o Confinanz SA, Via Nassa 62, 6900 Lugano</div>
+      <div><span class="il" data-i18n="imp.uid">IDI (UID)</span>CHE-114.312.096</div>
+      <div><span class="il" data-i18n="imp.contact">Contatto</span>+41 77 279 74 20 · info@breithornservice.com</div>
+    </div>
+  </details>
+</footer>
+
+<script>
+  const I18N = {
+    it:{
+      "_title":"Breithorn Service SA — Strategia e Consulenza · Lugano",
+      "nav.approach":"Cosa facciamo","nav.portfolio":"Portfolio","nav.contact":"Contatti",
+      "hero.eyebrow":"Strategia · Sviluppo commerciale · Analisi",
+      "hero.h1":"From here,<br>decisions get <em>clearer.</em>",
+      "hero.lede":"Breithorn Service SA è una società di consulenza con sede a Lugano. Affianchiamo un gruppo selezionato di aziende industriali e di consumo in strategia, sviluppo commerciale e digitalizzazione.",
+      "hero.cta1":"Scopri il portfolio <span aria-hidden=\"true\">→</span>",
+      "hero.cta2":"Contattaci",
+      "approach.eyebrow":"Cosa facciamo",
+      "approach.h2":"I nostri servizi.",
+      "disc1.h3":"Strategia","disc1.p":"Scelte chiare su dove investire tempo, capitale e attenzione.",
+      "disc2.h3":"Sviluppo commerciale","disc2.p":"Nuovi mercati, canali e partner commerciali.",
+      "disc3.h3":"Analisi","disc3.p":"I numeri dietro le decisioni: costi, margini, scenari e rischi, letti con chiarezza.",
+      "disc4.h3":"Consulenza direzionale","disc4.p":"Struttura, ritmo e responsabilità: il piano diventa esecuzione quotidiana.",
+      "disc5.h3":"Digitalizzazione","disc5.p":"Processi e archivi portati dal cartaceo al digitale, senza stravolgere il lavoro di tutti i giorni.",
+      "disc6.h3":"Integrazione AI","disc6.p":"Portare l'intelligenza artificiale nei flussi di lavoro, dove serve davvero.",
+      "port.eyebrow":"Portfolio",
+      "port.intro":"Un gruppo selezionato tra industria pesante, tecnologie per l'edilizia e beni di consumo di pregio. Affianchiamo ciascuna nel lungo periodo.",
+      "sector.ivr":"Valvole a sfera e componenti idrotermosanitari",
+      "sector.krio":"Tecnologie HVAC e per il comfort climatico",
+      "sector.effecto":"Automazione industriale, robotica ed EOAT",
+      "sector.seas":"Generazione di acqua dall'aria",
+      "sector.tanca":"Una casa di marchi di consumo",
+      "sector.pilo":"Alta orologeria svizzera su misura",
+      "sector.ykg":"Innovazione e marchi per la cucina",
+      "sector.egm":"Ospitalità boutique — business & leisure",
+      "visit":"Visita",
+      "contact.eyebrow":"Contatti","contact.h2":"Troviamo insieme la via più chiara.",
+      "contact.office":"Sede","contact.direct":"Contatti diretti","contact.hours":"Orari",
+      "contact.country":"Svizzera","contact.hoursval":"Lunedì – Venerdì<br>Su appuntamento",
+      "form.name":"Nome e cognome","form.name.ph":"Mario Rossi",
+      "form.company":"Azienda","form.company.ph":"Nome dell'azienda",
+      "form.email":"Email","form.email.ph":"nome@azienda.ch",
+      "form.topic":"Ambito d'interesse",
+      "form.topic.strategy":"Strategia","form.topic.bizdev":"Sviluppo commerciale","form.topic.analysis":"Analisi","form.topic.consulting":"Consulenza direzionale","form.topic.other":"Altro",
+      "form.message":"Messaggio","form.message.ph":"Come possiamo aiutarti?",
+      "form.submit":"Invia messaggio <span aria-hidden=\"true\">→</span>",
+      "form.success.title":"Messaggio inviato.","form.success.text":"Grazie. Ti ricontatteremo al più presto.",
+      "footer.rights":"© 2026 · Tutti i diritti riservati",
+      "disc.more":"Scopri di più <span aria-hidden=\"true\">→</span>",
+      "footer.impressum":"Impressum","footer.privacy":"Informativa privacy",
+      "imp.company":"Ragione sociale","imp.form":"Forma giuridica","imp.formv":"Società anonima (SA)",
+      "imp.seat":"Sede","imp.address":"Indirizzo","imp.uid":"IDI (UID)",
+      
+      "imp.contact":"Contatto"
+    },
+    en:{
+      "_title":"Breithorn Service SA — Strategy & Advisory · Lugano",
+      "nav.approach":"What we do","nav.portfolio":"Portfolio","nav.contact":"Contact",
+      "hero.eyebrow":"Strategy · Business development · Analysis",
+      "hero.h1":"From here,<br>decisions get <em>clearer.</em>",
+      "hero.lede":"Breithorn Service SA is a Lugano-based advisory firm. We support a select group of industrial and consumer companies in strategy, business development and digitalisation.",
+      "hero.cta1":"See the portfolio <span aria-hidden=\"true\">→</span>",
+      "hero.cta2":"Contact us",
+      "approach.eyebrow":"What we do",
+      "approach.h2":"Our services.",
+      "disc1.h3":"Strategy","disc1.p":"Clear choices on where to invest time, capital and attention.",
+      "disc2.h3":"Business development","disc2.p":"New markets, channels and business partners.",
+      "disc3.h3":"Analysis","disc3.p":"The numbers behind the decision: costs, margins, scenarios, risk read plainly.",
+      "disc4.h3":"Management consulting","disc4.p":"Structure, cadence and accountability: the plan becomes daily execution.",
+      "disc5.h3":"Digitalisation","disc5.p":"Processes and records moved from paper to digital, without upending everyday work.",
+      "disc6.h3":"AI integration","disc6.p":"Bringing artificial intelligence into workflows, where it genuinely helps.",
+      "port.eyebrow":"Portfolio",
+      "port.intro":"A curated group across heavy industry, building technology and refined consumer goods. We work alongside each for the long term.",
+      "sector.ivr":"Ball valves & hydraulic-thermal components",
+      "sector.krio":"HVAC & climate comfort technology",
+      "sector.effecto":"Industrial automation, robotics & EOAT",
+      "sector.seas":"Atmospheric water generation",
+      "sector.tanca":"A house of consumer brands",
+      "sector.pilo":"Bespoke Swiss watchmaking",
+      "sector.ykg":"Kitchen innovation & brands",
+      "sector.egm":"Boutique hospitality — business & leisure",
+      "visit":"Visit",
+      "contact.eyebrow":"Contact","contact.h2":"Let's find the clearest way forward.",
+      "contact.office":"Office","contact.direct":"Direct","contact.hours":"Hours",
+      "contact.country":"Switzerland","contact.hoursval":"Monday – Friday<br>By appointment",
+      "form.name":"Full name","form.name.ph":"Jane Doe",
+      "form.company":"Company","form.company.ph":"Company name",
+      "form.email":"Email","form.email.ph":"name@company.ch",
+      "form.topic":"Area of interest",
+      "form.topic.strategy":"Strategy","form.topic.bizdev":"Business development","form.topic.analysis":"Analysis","form.topic.consulting":"Management consulting","form.topic.other":"Other",
+      "form.message":"Message","form.message.ph":"How can we help?",
+      "form.submit":"Send message <span aria-hidden=\"true\">→</span>",
+      "form.success.title":"Message sent.","form.success.text":"Thank you. We'll be in touch shortly.",
+      "footer.rights":"© 2026 · All rights reserved",
+      "disc.more":"Learn more <span aria-hidden=\"true\">→</span>",
+      "footer.impressum":"Legal notice","footer.privacy":"Privacy policy",
+      "imp.company":"Company name","imp.form":"Legal form","imp.formv":"Company limited by shares (SA)",
+      "imp.seat":"Registered seat","imp.address":"Address","imp.uid":"Business ID (UID)",
+      
+      "imp.contact":"Contact"
+    }
+  };
+
+  function setLang(lang){
+    const dict = I18N[lang]; if(!dict) return;
+    document.documentElement.lang = lang;
+    document.title = dict["_title"];
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      const k = el.getAttribute("data-i18n");
+      if(dict[k] !== undefined) el.innerHTML = dict[k];
+    });
+    document.querySelectorAll("[data-i18n-ph]").forEach(function(el){
+      const k = el.getAttribute("data-i18n-ph");
+      if(dict[k] !== undefined) el.setAttribute("placeholder", dict[k]);
+    });
+    document.querySelectorAll(".lang button").forEach(function(b){
+      const on = b.dataset.lang === lang;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+  document.querySelectorAll(".lang button").forEach(function(b){
+    b.addEventListener("click", function(){ setLang(b.dataset.lang); });
+  });
+  setLang("it");
+
+  /* ---- scroll reveal ---- */
+  if("IntersectionObserver" in window){
+    const io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    },{threshold:0.12, rootMargin:"0px 0px -8% 0px"});
+    document.querySelectorAll("[data-reveal],[data-reveal-stagger]").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll("[data-reveal],[data-reveal-stagger]").forEach(function(el){ el.classList.add("in"); });
+  }
+
+  /* ---- header scroll state ---- */
+  const header = document.querySelector("header.nav");
+  window.addEventListener("scroll", function(){
+    header.classList.toggle("scrolled", window.scrollY > 8);
+  }, {passive:true});
+
+  /* ---- contact form (Netlify Forms + inline success) ---- */
+  const cform = document.getElementById("contactForm");
+  const success = document.getElementById("formSuccess");
+  if(cform){
+    cform.addEventListener("submit", function(e){
+      e.preventDefault();
+      const body = new URLSearchParams(new FormData(cform)).toString();
+      function done(){ cform.style.display = "none"; success.hidden = false; success.scrollIntoView({behavior:"smooth", block:"center"}); }
+      fetch("/", {method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:body})
+        .then(done).catch(done);
+    });
+  }
+</script>
+
+<div class="modal-overlay" id="serviceModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Servizio">
+    <button class="modal-close" id="serviceClose" aria-label="Close">&times;</button>
+    <div class="modal-content" id="serviceContent"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var SERVICES = {"s1": {"it": "<h3>Strategia</h3><p>Aiutiamo la direzione a mettere a fuoco dove l'azienda vuole arrivare e a costruire il percorso più solido per farlo — senza slogan, con priorità chiare.</p><h4>Cosa include</h4><ul><li>Analisi del posizionamento competitivo e delle opportunità di mercato</li><li>Definizione degli obiettivi a medio e lungo termine</li><li>Allocazione di risorse, tempo e capitale sulle priorità che contano</li><li>Piani d'azione misurabili e verificabili nel tempo</li></ul>", "en": "<h3>Strategy</h3><p>We help leadership sharpen where the company wants to go and build the most solid path to get there — no slogans, clear priorities.</p><h4>What's included</h4><ul><li>Competitive positioning and market opportunity analysis</li><li>Definition of medium- and long-term objectives</li><li>Allocation of resources, time and capital to the priorities that matter</li><li>Measurable action plans, reviewed over time</li></ul>"}, "s2": {"it": "<h3>Sviluppo commerciale</h3><p>Apriamo nuovi mercati, canali e partnership in modo strutturato, trasformando le opportunità in relazioni commerciali durature.</p><h4>Cosa include</h4><ul><li>Ricerca e valutazione di nuovi mercati e segmenti</li><li>Sviluppo di canali di vendita e reti di distribuzione</li><li>Individuazione e negoziazione di partner e accordi commerciali</li><li>Strategie di ingresso e piani di espansione</li></ul>", "en": "<h3>Business development</h3><p>We open new markets, channels and partnerships in a structured way, turning opportunities into lasting commercial relationships.</p><h4>What's included</h4><ul><li>Research and assessment of new markets and segments</li><li>Development of sales channels and distribution networks</li><li>Identification and negotiation of partners and agreements</li><li>Market-entry strategies and expansion plans</li></ul>"}, "s3": {"it": "<h3>Analisi</h3><p>Mettiamo i numeri al servizio delle decisioni: costi, margini, scenari e rischi letti con metodo, così ogni scelta poggia su dati solidi.</p><h4>Cosa include</h4><ul><li>Analisi economico-finanziaria e di redditività</li><li>Modelli di costo e simulazioni di scenario</li><li>Valutazione dei rischi e analisi di sensitività</li><li>Reportistica chiara a supporto delle decisioni</li></ul>", "en": "<h3>Analysis</h3><p>We put the numbers at the service of decisions: costs, margins, scenarios and risks read with method, so every choice rests on solid data.</p><h4>What's included</h4><ul><li>Financial and profitability analysis</li><li>Cost models and scenario simulations</li><li>Risk assessment and sensitivity analysis</li><li>Clear reporting to support decisions</li></ul>"}, "s4": {"it": "<h3>Consulenza direzionale</h3><p>Trasformiamo il piano in esecuzione quotidiana, dando all'organizzazione struttura, ritmo e responsabilità chiare.</p><h4>Cosa include</h4><ul><li>Revisione di processi e struttura organizzativa</li><li>Definizione di ruoli, responsabilità e indicatori (KPI)</li><li>Governance e cadenze operative: riunioni e reporting</li><li>Affiancamento alla direzione nell'implementazione</li></ul>", "en": "<h3>Management consulting</h3><p>We turn the plan into daily execution, giving the organisation structure, cadence and clear accountability.</p><h4>What's included</h4><ul><li>Review of processes and organisational structure</li><li>Definition of roles, responsibilities and KPIs</li><li>Governance and operating cadences: meetings and reporting</li><li>Hands-on support to leadership during implementation</li></ul>"}, "s5": {"it": "<h3>Digitalizzazione</h3><p>Portiamo processi e archivi dal cartaceo al digitale con ordine, senza stravolgere il lavoro quotidiano delle persone.</p><h4>Cosa include</h4><ul><li>Mappatura dei processi e digitalizzazione documentale</li><li>Selezione e introduzione di strumenti gestionali</li><li>Automazione delle attività ripetitive</li><li>Formazione e accompagnamento al cambiamento</li></ul>", "en": "<h3>Digitalisation</h3><p>We move processes and records from paper to digital in good order, without upending people's everyday work.</p><h4>What's included</h4><ul><li>Process mapping and document digitalisation</li><li>Selection and roll-out of management tools</li><li>Automation of repetitive tasks</li><li>Training and change support</li></ul>"}, "s6": {"it": "<h3>Integrazione AI</h3><p>Introduciamo l'intelligenza artificiale dove crea un vantaggio reale, integrandola nei flussi di lavoro esistenti in modo pragmatico e sicuro.</p><h4>Cosa include</h4><ul><li>Individuazione dei casi d'uso a maggior ritorno</li><li>Integrazione di strumenti AI nei processi aziendali</li><li>Automazione intelligente e supporto alle decisioni</li><li>Attenzione a governance, qualità dei dati e privacy</li></ul>", "en": "<h3>AI integration</h3><p>We bring artificial intelligence in where it creates real advantage, integrating it pragmatically and safely into existing workflows.</p><h4>What's included</h4><ul><li>Identification of the highest-return use cases</li><li>Integration of AI tools into business processes</li><li>Intelligent automation and decision support</li><li>Attention to governance, data quality and privacy</li></ul>"}};
+  var modal=document.getElementById('serviceModal');
+  var content=document.getElementById('serviceContent');
+  var current=null;
+  function cur(){ return document.documentElement.lang==='en'?'en':'it'; }
+  function render(){ if(current) content.innerHTML = SERVICES[current][cur()]; }
+  function openM(id){ current=id; render(); modal.hidden=false; document.body.style.overflow='hidden'; modal.querySelector('.modal').scrollTop=0; }
+  function closeM(){ modal.hidden=true; document.body.style.overflow=''; current=null; }
+  document.querySelectorAll('.disc[data-service]').forEach(function(card){
+    card.addEventListener('click', function(){ openM(card.dataset.service); });
+    card.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openM(card.dataset.service); } });
+  });
+  document.getElementById('serviceClose').addEventListener('click', closeM);
+  modal.addEventListener('click', function(e){ if(e.target===modal) closeM(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !modal.hidden) closeM(); });
+  document.querySelectorAll('.lang button').forEach(function(b){ b.addEventListener('click', function(){ if(!modal.hidden) setTimeout(render,0); }); });
+})();
+</script>
+<div class="modal-overlay" id="privacyModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Privacy">
+    <button class="modal-close" id="privacyClose" aria-label="Close">&times;</button>
+    <div class="modal-content" id="privacyContent"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var PRIVACY = { it: `<h3>Informativa sulla privacy</h3>
+<p>Breithorn Service SA rispetta la tua privacy e tratta i dati personali in conformità alla Legge federale svizzera sulla protezione dei dati (nLPD) e, ove applicabile, al Regolamento europeo sulla protezione dei dati (GDPR).</p>
+<h4>Titolare del trattamento</h4>
+<p>Breithorn Service SA, c/o Confinanz SA, Via Nassa 62, 6900 Lugano, Svizzera — <a href='mailto:info@breithornservice.com'>info@breithornservice.com</a>.</p>
+<h4>Dati che raccogliamo</h4>
+<p>Quando utilizzi il modulo di contatto raccogliamo i dati che ci fornisci: nome, azienda, indirizzo email, ambito di interesse e contenuto del messaggio. Per motivi tecnici e di sicurezza, i nostri fornitori di hosting possono registrare dati come l'indirizzo IP e l'orario della richiesta.</p>
+<h4>Finalità e base giuridica</h4>
+<p>Trattiamo questi dati esclusivamente per rispondere alle tue richieste e per i contatti successivi. La base giuridica è il tuo consenso e/o l'esecuzione di misure precontrattuali da te richieste, oltre al nostro legittimo interesse a gestire le comunicazioni.</p>
+<h4>Comunicazione e trasferimento dei dati</h4>
+<p>I dati inviati tramite il sito sono trattati dai nostri fornitori di hosting e di gestione dei moduli, che agiscono come responsabili del trattamento. Alcuni fornitori possono trattare i dati al di fuori della Svizzera o dell'UE; in tali casi adottiamo garanzie adeguate. Non vendiamo né cediamo i tuoi dati a terzi per finalità di marketing.</p>
+<h4>Font e risorse esterne</h4>
+<p>Il sito carica i caratteri tipografici tramite Google Fonts, il che può comportare la trasmissione del tuo indirizzo IP ai server di Google.</p>
+<h4>Cookie</h4>
+<p>Questo sito non utilizza cookie di tracciamento, di profilazione o pubblicitari.</p>
+<h4>Conservazione</h4>
+<p>Conserviamo i dati solo per il tempo necessario a gestire la tua richiesta e ad adempiere agli obblighi di legge, dopodiché vengono cancellati.</p>
+<h4>I tuoi diritti</h4>
+<p>Hai il diritto di accedere ai tuoi dati, di chiederne la rettifica o la cancellazione, di limitarne o opporti al trattamento e, ove applicabile, alla portabilità. Puoi revocare il consenso in qualsiasi momento scrivendo a <a href='mailto:info@breithornservice.com'>info@breithornservice.com</a>. Hai inoltre il diritto di rivolgerti all'autorità di controllo competente (in Svizzera, l'Incaricato federale della protezione dei dati e della trasparenza, IFPDT).</p>
+<h4>Modifiche</h4>
+<p>Possiamo aggiornare la presente informativa; la versione in vigore è quella pubblicata su questa pagina. Ultimo aggiornamento: luglio 2026.</p>`, en: `<h3>Privacy policy</h3>
+<p>Breithorn Service SA respects your privacy and processes personal data in accordance with the Swiss Federal Act on Data Protection (revised FADP / nLPD) and, where applicable, the EU General Data Protection Regulation (GDPR).</p>
+<h4>Data controller</h4>
+<p>Breithorn Service SA, c/o Confinanz SA, Via Nassa 62, 6900 Lugano, Switzerland — <a href='mailto:info@breithornservice.com'>info@breithornservice.com</a>.</p>
+<h4>Data we collect</h4>
+<p>When you use the contact form we collect the data you provide: name, company, email address, area of interest and the content of your message. For technical and security reasons, our hosting providers may log data such as your IP address and the time of the request.</p>
+<h4>Purpose and legal basis</h4>
+<p>We process this data solely to respond to your enquiries and for any follow-up contact. The legal basis is your consent and/or the performance of pre-contractual steps taken at your request, as well as our legitimate interest in managing communications.</p>
+<h4>Disclosure and transfer of data</h4>
+<p>Data sent through the site is processed by our hosting and form-processing providers, acting as data processors. Some providers may process data outside Switzerland or the EU; in such cases we apply appropriate safeguards. We do not sell or share your data with third parties for marketing purposes.</p>
+<h4>Fonts and external resources</h4>
+<p>The site loads its typefaces via Google Fonts, which may involve transmitting your IP address to Google's servers.</p>
+<h4>Cookies</h4>
+<p>This site does not use tracking, profiling or advertising cookies.</p>
+<h4>Retention</h4>
+<p>We keep data only for as long as necessary to handle your request and to meet legal obligations, after which it is deleted.</p>
+<h4>Your rights</h4>
+<p>You have the right to access your data, to request its rectification or erasure, to restrict or object to its processing and, where applicable, to data portability. You may withdraw your consent at any time by writing to <a href='mailto:info@breithornservice.com'>info@breithornservice.com</a>. You also have the right to lodge a complaint with the competent supervisory authority (in Switzerland, the Federal Data Protection and Information Commissioner, FDPIC).</p>
+<h4>Changes</h4>
+<p>We may update this policy; the version in force is the one published on this page. Last updated: July 2026.</p>` };
+  var modal=document.getElementById('privacyModal');
+  var content=document.getElementById('privacyContent');
+  function cur(){ return document.documentElement.lang==='en'?'en':'it'; }
+  function render(){ content.innerHTML = PRIVACY[cur()]; }
+  function openM(){ render(); modal.hidden=false; document.body.style.overflow='hidden'; }
+  function closeM(){ modal.hidden=true; document.body.style.overflow=''; }
+  var ob=document.getElementById('privacyOpen'); if(ob) ob.addEventListener('click', openM);
+  document.getElementById('privacyClose').addEventListener('click', closeM);
+  modal.addEventListener('click', function(e){ if(e.target===modal) closeM(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && !modal.hidden) closeM(); });
+  document.querySelectorAll('.lang button').forEach(function(b){ b.addEventListener('click', function(){ if(!modal.hidden) setTimeout(render,0); }); });
+})();
+</script>
+</body>
+</html>
